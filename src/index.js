@@ -4,14 +4,28 @@ const file = require('./file/file');
 let Index = function () {
     let main = async function (commandModel) {
         core.info(`Node Chart Exec Start`);
-        const chartJSNodeCanvas = new ChartJSNodeCanvas({width: 600, height: 400});
-        const configType = commandModel.type;
+        let configType = commandModel.type;
+        let configHeight = commandModel.height;
+        let configWidth = commandModel.width;
         const configLabels = JSON.parse(commandModel.labels);
         const configDataset = JSON.parse(commandModel.dataset);
-        const configOutputFile = commandModel.outputFile;
+        let configOutputFile = commandModel.outputFile;
+        if(configType === '' || configType === undefined){
+            configType = 'line';
+        }
+        if(configHeight === '' || configHeight === undefined){
+            configHeight = 400;
+        }
+        if(configWidth === '' || configWidth === undefined){
+            configWidth = 400;
+        }
+        if(configOutputFile === '' || configOutputFile === undefined){
+            configWidth = 'output.png';
+        }
         core.info(`Type ${configType}`);
         core.info(`Labels ${JSON.stringify(configLabels)}`);
         core.info(`Output ${configOutputFile}`);
+        const chartJSNodeCanvas = new ChartJSNodeCanvas({width: configWidth, height: configHeight});
         let datasets = [];
         let numberOfDatasets = 1;
         for (const dataset of configDataset) {
