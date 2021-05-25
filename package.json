@@ -1,0 +1,40 @@
+{
+  "name": "node-chart-exec",
+  "version": "1.0.0",
+  "description": "An executable binary for creating charts in Node.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
+  },
+  "bin": "src/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gayanvoice/node-chart-exec.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Gayan Kuruppu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gayanvoice/node-chart-exec/issues"
+  },
+  "homepage": "https://github.com/gayanvoice/node-chart-exec#readme",
+  "dependencies": {
+    "@actions/core": "1.2.5",
+    "chart.js": "2.9.3",
+    "chartjs-node-canvas": "3.0.8",
+    "fs-extra": "9.1.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0",
+    "eslint": "^7.4.0",
+    "jest": "^26.6.3"
+  }
+}
