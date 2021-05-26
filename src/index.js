@@ -1,7 +1,6 @@
 const core = require('@actions/core');
 const {ChartJSNodeCanvas} = require('chartjs-node-canvas');
 const file = require('./core/file');
-const git = require('./core/git');
 let Index = function () {
     let isValidInput = function (input) {
         return !(input === '' || input === undefined);
@@ -27,7 +26,6 @@ let Index = function () {
                         if(isValidJson(commandModel.labels)){
                             if(isValidJson(commandModel.dataset)){
                                 core.info(`All inputs are validated`);
-                                await git.pull();
                                 const configType = commandModel.type;
                                 const configHeight = commandModel.height;
                                 const configWidth = commandModel.width;
@@ -55,13 +53,32 @@ let Index = function () {
                                     data: {
                                         labels: configLabels,
                                         datasets: datasets
+                                    },
+                                    options: {
+                                        legend: { display: false },
+                                        scales: {
+                                            xAxes: [
+                                                {
+                                                    display: false,
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                },
+                                            ],
+                                            yAxes: [
+                                                {
+                                                    display: false,
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                },
+                                            ],
+                                        },
                                     }
                                 };
                                 try {
                                     const image = await chartJSNodeCanvas.renderToBuffer(configuration);
                                     await file.createImage(configOutputFile, image);
-                                    await git.commit('Github Insights Bot', '82011272+github-insights-bot@users.noreply.github.com', 'message')
-                                    await git.push('main')
                                 } catch (error) {
                                     core.info(`Node Chart Exec Failed`);
                                     core.info(`Error ${error}`);
