@@ -33,8 +33,8 @@ let Index = function () {
                                 const configLabels = JSON.parse(commandModel.labels);
                                 const configDataset = JSON.parse(commandModel.dataset);
                                 const chartJSNodeCanvas = new ChartJSNodeCanvas({width: configWidth, height: configHeight});
-                                core.info(`Canvas width=${configWidth} & height=${configHeight}`);
-                                core.info(`Chart type=${configType} labels=${JSON.stringify(configLabels)} output=${configOutputFile}`);
+                                core.info(`Canvas width=${configWidth} height=${configHeight}`);
+                                core.info(`Chart type=${configType} labels=${JSON.stringify(configLabels)} output-file=${configOutputFile}`);
                                 let datasets = [];
                                 let numberOfDatasets = 1;
                                 for (const dataset of configDataset) {
@@ -44,11 +44,8 @@ let Index = function () {
                                         backgroundColor: dataset.backgroundColor,
                                         borderColor: dataset.borderColor
                                     });
-                                    core.info(`Dataset [${numberOfDatasets}/${configDataset.length}] 
-                                    label=${dataset.label} 
-                                    data=${dataset.data} 
-                                    background-color=${dataset.backgroundColor} 
-                                    border-color=${dataset.borderColor}`);
+                                    core.info(`Dataset [${numberOfDatasets}/${configDataset.length}] label=${dataset.label} ` +
+                                        `data=${dataset.data} background-color=${dataset.backgroundColor} border-color=${dataset.borderColor}`);
                                     numberOfDatasets++;
                                 }
                                 const configuration = {
@@ -66,22 +63,22 @@ let Index = function () {
                                     core.info(`Error ${error}`);
                                 }
                             } else {
-                                core.info(`Please enter a valid dataset.`)
+                                core.info(`Please enter a valid dataset`)
                             }
                         } else {
-                            core.info(`Please enter valid labels.`)
+                            core.info(`Please enter valid labels`)
                         }
                     } else {
-                        core.info(`Please enter a valid output file.`)
+                        core.info(`Please enter a valid output file`)
                     }
                 } else {
-                    core.info(`Please enter a valid width.`)
+                    core.info(`Please enter a valid width`)
                 }
             } else {
-                core.info(`Please enter a valid height.`)
+                core.info(`Please enter a valid height`)
             }
         } else {
-            core.info(`Please enter a valid type.`)
+            core.info(`Please enter a valid type`)
         }
         core.info(`Node Chart Exec Completed`);
     }
