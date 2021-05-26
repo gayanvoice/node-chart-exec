@@ -4,6 +4,6 @@ const path = require('path');
 // shows how the runner will run a javascript action with env / stdout protocol
 test('test runs', () => {
   process.env['INPUT_MILLISECONDS'] = 500;
-  const ip = path.join(__dirname, 'index.js');
+  const ip = path.join(__dirname, 'cli.js');
   console.log(cp.execSync(`node ${ip}`, {env: process.env}).toString());
 })

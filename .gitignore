@@ -57,10 +57,10 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn Integrity core
 .yarn-integrity
 
-# dotenv environment variables file
+# dotenv environment variables core
 .env
 
 # next.js build output

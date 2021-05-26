@@ -1,5 +1,5 @@
 name: 'JavaScript Action | File Handling and GitHub Operations'
-description: 'The repository shows file handling and git operations'
+description: 'The repository shows core handling and git operations'
 runs:
   using: 'node12'
   main: 'dist/index.js'
