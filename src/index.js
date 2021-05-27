@@ -39,7 +39,7 @@ let Index = function () {
                                         height: configHeight
                                     });
                                     console.log(`Canvas width=${configWidth} height=${configHeight}`);
-                                    console.log(`Chart type=${configType} options=${configOptions} labels=${JSON.stringify(configLabels)} output-file=${configOutputFile}`);
+                                    console.log(`Chart type='${configType}' options=${configOptions} labels=${JSON.stringify(configLabels)} output-file='${configOutputFile}'`);
                                     let datasets = [];
                                     let numberOfDatasets = 1;
                                     for (const dataset of configDataset) {
@@ -49,8 +49,8 @@ let Index = function () {
                                             backgroundColor: dataset.backgroundColor,
                                             borderColor: dataset.borderColor
                                         });
-                                        console.log(`Dataset [${numberOfDatasets}/${configDataset.length}] label=${dataset.label} ` +
-                                            `data=${dataset.data} background-color=${dataset.backgroundColor} border-color=${dataset.borderColor}`);
+                                        console.log(`Dataset [${numberOfDatasets}/${configDataset.length}] label='${dataset.label}' ` +
+                                            `data='${dataset.data}' background-color='${dataset.backgroundColor}' border-color='${dataset.borderColor}'`);
                                         numberOfDatasets++;
                                     }
                                     if(configOptions === 'true'){
