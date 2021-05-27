@@ -16,6 +16,7 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 ## Output
 ### Line chart
 #### With options `--options=true`
+#### Command Line
 ```shell
 $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-options.png'
 
@@ -27,7 +28,7 @@ $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=
   Image file created at 'output/lines-chart-with-options.png'
   Node Chart Exec Completed
 ```
-##### output
+##### Output
 | `output/lines-chart-with-options.png` |
 | ------ |
 | ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-with-options.png) |
