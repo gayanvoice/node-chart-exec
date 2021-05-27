@@ -28,7 +28,9 @@ $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=
   Node Chart Exec Completed
 ```
 ##### output
-![Line Chart With Options](https://github.com/gayanvoice/node-chart-exec/images/line-chart-with-options.png)
+| `output/lines-chart-with-options.png` |
+| ------ |
+| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-with-options.png) |
 
 
 ## Author
