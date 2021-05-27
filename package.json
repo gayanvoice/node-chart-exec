@@ -4,7 +4,7 @@
   "description": "An executable binary for creating charts in Node.js",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt",
+    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt"
   },
   "bin": "src/cli.js",
   "repository": {
@@ -33,6 +33,6 @@
     "yargs": "17.0.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.27.0",
+    "@vercel/ncc": "0.27.0"
   }
 }
