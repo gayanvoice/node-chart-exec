@@ -7,7 +7,7 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 | Option | Description | Type | Example | Required |
 | ------ | ----------- | ---- | ------- | -------- |
 | `--type` | Chart type supported by Chart.js. | `String` | `--type='line'` | `true` |
-| `--options` | Choose `true` for enable options or `false` for disable options. If you enter `true` it will remove all the values from the chart. | `Boolean` | `--options=true` | `true` |
+| `--options` | Choose `true` for enable options or `false` for disable options. If you enter `true` it will remove all the values from the chart. | `String` | `--options='true'` | `true` |
 | `--height` | Height of the canvas.| `Integer` | `--height=400` | `true` |
 | `--width` | Width of the canvas. | `Integer` | `--width=400` | `true` |
 | `--labels` | Labels of the chart. |`JSON` | `--labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]'` | `true` |
@@ -16,7 +16,7 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 ## Output
 ### Line chart
 #### With options `--options=true`
-#### Command Line
+##### Command Line
 ```shell
 $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-options.png'
 
