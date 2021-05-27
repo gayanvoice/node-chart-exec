@@ -28,10 +28,25 @@ $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=
   Image file created at 'output/lines-chart-with-options.png'
   Node Chart Exec Completed
 ```
+#### With options `--options=true`
+##### Command Line
+
+```shell
+$ npx node-chart-exec@1.0.8 --type='line' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-no-options.png'
+
+  Node Chart Exec Started
+  All inputs are validated
+  Canvas width=400 height=400
+  Chart type='line' options='false' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/lines-chart-with-options.png'
+  Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
+  Image file created at 'output/lines-chart-without-options.png'
+  Node Chart Exec Completed
+```
+
 ##### Output
-| `output/lines-chart-with-options.png` |
-| ------ |
-| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-with-options.png) |
+| `output/lines-chart-with-options.png` | `output/lines-chart-without-options.png` |
+| ------------------------------------- | ---------------------------------------- |
+| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-with-options.png) | ![Line Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-without-options.png) |
 
 
 ## Author
