@@ -14,17 +14,23 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 | `--dataset` | Dataset of the chart. |`JSON` | `--dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}}]'` | `true` |
 | `--outputfile` | Output file in `PNG` file type. |`String` | `--outputfile='directory/file.png'` | `true` |
 ## Output
+### Line chart
+#### With options `--options=true`
 ```shell
-$ npx node-chart-exec@1.0.7 --type='line' --options=true --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/linechart.png'
+$ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-options.png'
 
   Node Chart Exec Started
   All inputs are validated
   Canvas width=400 height=400
-  Chart type=line options=true labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file=output/linechart.png
-  Dataset [1/1] label=Label of Chart data=10,20,30,40,50,40 background-color=#7ACFFF border-color=#00A3FF
-  Image file created at output/linechart.png
+  Chart type='line' options='true' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/lines-chart-with-options.png'
+  Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
+  Image file created at 'output/lines-chart-with-options.png'
   Node Chart Exec Completed
 ```
+##### output
+![Line Chart With Options](https://github.com/gayanvoice/node-chart-exec/images/line-chart-with-options.png)
+
+
 ## Author
 Written by [Gayan Kuruppu](https://github.com/gayanvoice).
 

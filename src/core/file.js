@@ -3,9 +3,9 @@ let file = (function () {
     let createImage = async function (fileName, image) {
         try {
             await fs.outputFile(fileName, image)
-            console.log( `Image file created at ${fileName}`)
+            console.log( `Image file created at '${fileName}'`)
         } catch (error) {
-            console.error( `Image file created at ${fileName}`)
+            console.error( `Image file created at '${fileName}'`)
         }
     }
     return {
