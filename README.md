@@ -14,46 +14,70 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 | `--dataset` | Dataset of the chart. |`JSON` | `--dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}}]'` | `true` |
 | `--outputfile` | Output file in `PNG` file type. |`String` | `--outputfile='directory/file.png'` | `true` |
 ## Output
-### Line chart
+### 1. Line chart `--type='line'`
 #### With options `--options=true`
 ##### Command Line
 ```shell
-$ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-options.png'
+$ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-options.png'
 
   Node Chart Exec Started
   All inputs are validated
   Canvas width=400 height=400
-  Chart type='line' options='true' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/lines-chart-with-options.png'
+  Chart type='line' options='true' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/line-chart-with-options.png'
   Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
-  Image file created at 'output/lines-chart-with-options.png'
+  Image file created at 'output/line-chart-with-options.png'
   Node Chart Exec Completed
 ```
-#### With options `--options=true`
+#### Without options `--options=false`
 ##### Command Line
-
 ```shell
-$ npx node-chart-exec@1.0.8 --type='line' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/lines-chart-with-no-options.png'
+$ npx node-chart-exec@1.0.8 --type='line' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-no-options.png'
 
   Node Chart Exec Started
   All inputs are validated
   Canvas width=400 height=400
-  Chart type='line' options='false' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/lines-chart-with-options.png'
+  Chart type='line' options='false' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/line-chart-with-options.png'
   Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
-  Image file created at 'output/lines-chart-without-options.png'
+  Image file created at 'output/line-chart-without-options.png'
   Node Chart Exec Completed
 ```
-
 ##### Output
 | `output/lines-chart-with-options.png` | `output/lines-chart-without-options.png` |
 | ------------------------------------- | ---------------------------------------- |
-| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-with-options.png) | ![Line Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/lines-chart-without-options.png) |
+| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/line-chart-with-options.png) | ![Line Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/line-chart-without-options.png) |
+### 2. Bar chart `--type='bar'`
+#### With options `--options=true`
+##### Command Line
+```shell
+$ npx node-chart-exec@1.0.9 --type='bar' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-with-options.png'
+  
+  Node Chart Exec Started
+  All inputs are validated
+  Canvas width=400 height=400
+  Chart type='bar' options='true' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/bar-chart-with-options.png'
+  Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
+  Image file created at 'output/bar-chart-with-options.png'
+  Node Chart Exec Completed
+```
+#### Without options `--options=false`
+##### Command Line
+```shell
+$ npx node-chart-exec@1.0.9 --type='bar' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-without-options.png'
 
-
+  Node Chart Exec Started
+  All inputs are validated
+  Canvas width=400 height=400
+  Chart type='bar' options='false' labels=["Label 1","Label 2","Label 3","Label 4","Label 5","Label 6"] output-file='output/bar-chart-without-options.png'
+  Dataset [1/1] label='Label of Chart' data=[10,20,30,40,50,40] background-color='#7ACFFF' border-color='#00A3FF'
+  Image file created at 'output/bar-chart-without-options.png'
+```
+##### Output
+| `output/lines-chart-with-options.png` | `output/lines-chart-without-options.png` |
+| ------------------------------------- | ---------------------------------------- |
+| ![Bar Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/bar-chart-with-options.png) | ![Bar Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/bar-chart-without-options.png) |
 ## Author
 Written by [Gayan Kuruppu](https://github.com/gayanvoice).
-
 ## 📄 License
-
 - Repository: [gayanvoice/node-chart-exec](https://github.com/gayanvoice/node-chart-exec)
 - NPM: [node-chart-exec](https://www.npmjs.com/package/node-chart-exec)
 - Code: [MIT](./LICENSE) © [Gayan Kuruppu](https://github.com/gayanvoice)
