@@ -6,7 +6,7 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 ## Description
 | Option | Description | Type | Example | Required |
 | ------ | ----------- | ---- | ------- | -------- |
-| `--type` | Chart type supported by Chart.js. | `String` | `--type='line'` | `true` |
+| `--type` | Chart type supported by Chart.js. Types `line`, `bar` | `String` | `--type='line'` | `true` |
 | `--options` | Choose `true` for enable options or `false` for disable options. If you enter `true` it will remove all the values from the chart. | `String` | `--options='true'` | `true` |
 | `--height` | Height of the canvas.| `Integer` | `--height=400` | `true` |
 | `--width` | Width of the canvas. | `Integer` | `--width=400` | `true` |
@@ -18,7 +18,7 @@ It uses dependencies [Chart.js](https://www.chartjs.org/), [chartjs-node-canvas]
 #### With options `--options=true`
 ##### Command Line
 ```shell
-$ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-options.png'
+$ npx node-chart-exec@2.0.0 --type='line' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-options.png'
 
   Node Chart Exec Started
   All inputs are validated
@@ -31,7 +31,7 @@ $ npx node-chart-exec@1.0.8 --type='line' --options='true' --height=400 --width=
 #### Without options `--options=false`
 ##### Command Line
 ```shell
-$ npx node-chart-exec@1.0.8 --type='line' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-no-options.png'
+$ npx node-chart-exec@2.0.0 --type='line' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/line-chart-with-no-options.png'
 
   Node Chart Exec Started
   All inputs are validated
@@ -44,12 +44,12 @@ $ npx node-chart-exec@1.0.8 --type='line' --options='false' --height=400 --width
 ##### Output
 | `output/lines-chart-with-options.png` | `output/lines-chart-without-options.png` |
 | ------------------------------------- | ---------------------------------------- |
-| ![Line Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/line-chart-with-options.png) | ![Line Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/line-chart-without-options.png) |
+| ![Line Chart With Options](https://github.com/gayanvoice/node-chart-exec/raw/main/output/line-chart-with-options.png) | ![Line Chart Without Options](https://github.com/gayanvoice/node-chart-exec/raw/main/output/line-chart-without-options.png) |
 ### 2. Bar chart `--type='bar'`
 #### With options `--options=true`
 ##### Command Line
 ```shell
-$ npx node-chart-exec@1.0.9 --type='bar' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-with-options.png'
+$ npx node-chart-exec@2.0.0 --type='bar' --options='true' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-with-options.png'
   
   Node Chart Exec Started
   All inputs are validated
@@ -62,7 +62,7 @@ $ npx node-chart-exec@1.0.9 --type='bar' --options='true' --height=400 --width=4
 #### Without options `--options=false`
 ##### Command Line
 ```shell
-$ npx node-chart-exec@1.0.9 --type='bar' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-without-options.png'
+$ npx node-chart-exec@2.0.0 --type='bar' --options='false' --height=400 --width=400 --labels='["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6"]' --dataset='[{"label":"Label of Chart", "data":[10, 20, 30, 40, 50, 40], "backgroundColor":"#7ACFFF", "borderColor":"#00A3FF"}]' --outputfile='output/bar-chart-without-options.png'
 
   Node Chart Exec Started
   All inputs are validated
@@ -72,9 +72,9 @@ $ npx node-chart-exec@1.0.9 --type='bar' --options='false' --height=400 --width=
   Image file created at 'output/bar-chart-without-options.png'
 ```
 ##### Output
-| `output/lines-chart-with-options.png` | `output/lines-chart-without-options.png` |
+| `output/bar-chart-with-options.png` | `output/bar-chart-without-options.png` |
 | ------------------------------------- | ---------------------------------------- |
-| ![Bar Chart With Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/bar-chart-with-options.png) | ![Bar Chart Without Options](https://github.com/gayanvoice/javascript-action-template/raw/main/output/bar-chart-without-options.png) |
+| ![Bar Chart With Options](https://github.com/gayanvoice/node-chart-exec/raw/main/output/bar-chart-with-options.png) | ![Bar Chart Without Options](https://github.com/gayanvoice/node-chart-exec/raw/main/output/bar-chart-without-options.png) |
 ## Author
 Written by [Gayan Kuruppu](https://github.com/gayanvoice).
 ## 📄 License
