@@ -119,7 +119,7 @@ let Index = function () {
         } else {
             console.error(`Please enter a valid chart type`)
         }
-        console.error(`Node Chart Exec Completed`);
+        console.log(`Node Chart Exec Completed`);
     }
     return {
         main: main,
