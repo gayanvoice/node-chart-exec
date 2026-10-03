@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-const args = require('yargs').argv;
+const yargs = require('yargs/yargs');
+const {hideBin} = require('yargs/helpers');
+const args = yargs(hideBin(process.argv)).string('options').parseSync();
 const index = require('./index');
 const CommandModel = require('./model/CommandModel');
 const cli = async () => {

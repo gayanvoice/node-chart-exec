@@ -36,7 +36,11 @@ let Index = function () {
                                     let configuration;
                                     const chartJSNodeCanvas = new ChartJSNodeCanvas({
                                         width: configWidth,
-                                        height: configHeight
+                                        height: configHeight,
+                                        chartCallback: (ChartJS) => {
+                                            ChartJS.defaults.elements.line.tension = 0.4;
+                                            ChartJS.defaults.elements.line.fill = true;
+                                        }
                                     });
                                     console.log(`Canvas width=${configWidth} height=${configHeight}`);
                                     console.log(`Chart type='${configType}' options='${configOptions}' labels=${JSON.stringify(configLabels)} output-file='${configOutputFile}'`);
@@ -61,24 +65,18 @@ let Index = function () {
                                                 datasets: datasets
                                             },
                                             options: {
-                                                legend: {display: false},
+                                                plugins: {
+                                                    legend: {display: false}
+                                                },
                                                 scales: {
-                                                    xAxes: [
-                                                        {
-                                                            display: false,
-                                                            gridLines: {
-                                                                display: false,
-                                                            },
-                                                        },
-                                                    ],
-                                                    yAxes: [
-                                                        {
-                                                            display: false,
-                                                            gridLines: {
-                                                                display: false,
-                                                            },
-                                                        },
-                                                    ],
+                                                    x: {
+                                                        display: false,
+                                                        grid: {display: false}
+                                                    },
+                                                    y: {
+                                                        display: false,
+                                                        grid: {display: false}
+                                                    }
                                                 },
                                             }
                                         };

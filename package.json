@@ -1,10 +1,12 @@
 {
   "name": "node-chart-exec",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "An executable binary for creating charts in Node.js",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt"
+    "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt --external chartjs-node-canvas",
+    "test": "node --test src/index.test.js",
+    "start": "node src/cli.js"
   },
   "bin": "src/cli.js",
   "repository": {
@@ -27,12 +29,19 @@
   },
   "homepage": "https://github.com/gayanvoice/node-chart-exec#readme",
   "dependencies": {
-    "chart.js": "2.9.3",
-    "chartjs-node-canvas": "3.0.8",
-    "fs-extra": "9.1.0",
-    "yargs": "17.0.1"
+    "chart.js": "4.5.1",
+    "chartjs-node-canvas": "5.0.0",
+    "fs-extra": "11.4.1",
+    "yargs": "18.2.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.27.0"
+    "@vercel/ncc": "0.45.0"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "allowScripts": {
+    "canvas@3.2.3": true
   }
 }
